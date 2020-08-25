@@ -4,7 +4,7 @@
  
  The program takes your word and tries to replace it's parts with *pony* words from file `ponywords.txt`, printing the original word, ponified word and heuristical distance between them. The algorithms is able to generate such original names as *Manehattan*, *Maripony*, *Stalliongrad* and more!
 
- You are free to change and extend list of words in `ponywords.txt` to make your elf-stylized words. You are free to change `DISTANCE` constants to make results more accurate.
+ You are free to change and extend list of words in `ponywords.txt` to make your elf-stylized words. You are free to change `DIST` constants to make results more accurate.
  
  Enjoy!
 

@@ -7,19 +7,14 @@
 	Reinventing bicycles since 2020
 */
 
-#define RUSSIAN
+//#define RUSSIAN
 //#define DEBUGINFO
 #define N_RESULTS 10
 
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
-
-#ifdef RUSSIAN
-	#include <locale.h>
-#endif
 
 #define WAY_DOWN 1
 #define WAY_RIGHT 2
@@ -451,7 +446,7 @@ void print_help(void)
 		printf("Вы можете как угодно изменять этот файл и добавлять любые свои слова\n");
 		printf("Создано Мета-тяном, k.sovailo@gmail.com\n");
 		printf("Нажмите любую клавишу, чтобы продолжить...\n");
-		getch();
+		getchar();
 	#else
 		printf("Welcome to ponify 1.5\n");
 		printf("This program ponifies words and names like\n");
@@ -463,7 +458,7 @@ void print_help(void)
 		printf("You are free to edit the file and add your own pony (or non-pony) lexic\n");
 		printf("Created by Meta-chan, k.sovailo@gmail.com\n");
 		printf("Press any key to continue...\n");
-		getch();
+		getchar();
 	#endif	
 };
 
@@ -474,15 +469,15 @@ int main(int argc, char **argv)
 		#ifdef DEBUGINFO
 			char word[32];
 			printf("Enter the word you want to ponify\n");
-			scanf("%31s", word);
+			scanf("%31s", word); while (getchar() != '\n') {}
 			char ponyword[32];
 			printf("Enter the word you want to ponify with\n");
-			scanf("%31s", ponyword);
+			scanf("%31s", ponyword); while (getchar() != '\n') {}
 			char ponified[32];
 			ponify_word(word, ponyword, ponified, 1);
 			printf("%s\n", ponified);
 			ponify_word(word, ponyword, ponified, 0);
-			printf("%s\n", ponified);		
+			printf("%s\n", ponified);
 		#else
 			char word[32];
 			#ifdef RUSSIAN
@@ -490,7 +485,7 @@ int main(int argc, char **argv)
 			#else
 				printf("Enter the word you want to ponify or \"h\" for help\n");
 			#endif	
-			scanf("%31s", word);
+			scanf("%31s", word); while (getchar() != '\n') {}
 			if ((strcmp(word, "h") == 0) || (lowercase_check(word) == 0)) print_help();
 			else
 			{
@@ -501,7 +496,7 @@ int main(int argc, char **argv)
 				#else
 					printf("Press any key to continue...\n");
 				#endif
-				getch();
+				getchar();
 			}
 		#endif
 	}
