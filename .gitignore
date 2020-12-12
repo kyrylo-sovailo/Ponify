@@ -27,3 +27,7 @@ Thumbs.db
 **/Debug/
 **/Release/
 **/x64/
+
+# Build system #
+################
+vsdevcmd
