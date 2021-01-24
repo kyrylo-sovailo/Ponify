@@ -124,12 +124,12 @@ set DIRECTORY=%CD%
 :help
 	echo This script will help you to compile your program on Windows
 	echo Possible arguments are:
-	echo	Nothing	- to compile with default compiler and architecture
-	echo 	x86		- to compile with x86 32-bit architecture
-	echo 	amd64	- to compile with x86 64-bit architecture
-	echo 	gcc		- to compile with gcc/g++ compiler
-	echo	vs		- to compile with Visual Studio compiler
-	echo 	Everything else to ptint this help message
+	echo    Nothing - to compile with default compiler and architecture
+	echo    x86     - to compile with x86 (32-bit) architecture
+	echo    amd64   - to compile with amd64 (x86 64-bit) architecture
+	echo    gcc     - to compile with GCC (MinGW) compiler
+	echo    vs      - to compile with Visual Studio compiler
+	echo    Everything else to ptint this help message
 	echo Visit github.com/Meta-chan/ironic_make to know more about the project
 	for /f "delims=" %%r in ('echo %cmdcmdline% ^| find "\compile.bat"') do pause
 	exit /b 0
