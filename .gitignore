@@ -9,8 +9,8 @@
 *.so
 *.out
 
-# OS #
-######
+# OS generated #
+################
 .DS_Store
 .DS_Store?
 ._*
@@ -19,15 +19,11 @@
 ehthumbs.db
 Thumbs.db
 
-# Visual Studio #
-#################
-*.SLN
-*VCXPROJ*
-**/.vs/
-**/Debug/
-**/Release/
-**/x64/
+# Visual Studio Code #
+######################
+.vscode/
 
-# Build system #
-################
-vsdevcmd
+# CMake #
+#########
+build/
+documentation/
